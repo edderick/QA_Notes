@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Software Quality Assurance and Project Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">COMP3009</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <!--<li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Software Quality Assurance and Project Management</h1>
+		<p>Module Leader Dr. P.W.Garratt</p>
+		<p>The notes page describes this course as: 
+
+		<blockquote>
+		This module gives students the opportunity to manage a realistic
+		simulation of a software development project.  During the semester students'
+		decisions on staffing levels, development environment and project strategy
+		lead to a project outcome optimised for low budget, early delivery to the
+		client and high quality of the delivered items. Students will also learn
+		about software metrics and their value in different applications of
+		Information Technology. The process of software development in industry and
+		commerce is examined. We look at planning and decision tools relevant to
+		'heavyweight strategies' such as CMMI (Integrated Capability Maturity
+		Modelling) and PRINCE and 'lightweight strategies' such as Agile Methods. An
+		exercise in MonteCarlo simulation provides experience in Risk Management.
+		</blockquote>
+		</p>
+		
+
+	<h2>Lecture 1 - Introduction</h2>
+	<p><em>Lecture: Tue 29th January 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	<ul>	
+	<li>Introduced the software management game! </li>
+	<li>Exam:
+		<ul>
+		<li>100% of Course</li>
+		<li>60% Essays &ndash; 40% Very basic maths (GCSE/ITO level)</li>
+		<li>Standard 120 minutes. Answer 3/5 questions</li>
+		</ul>
+	</li>
+	<li>Some topics (Seems incomplete):
+		<ul>
+		<li>Critical Path Analysis</li>
+		<li>Simulation</li>
+		<li>Metrics</li>
+		</ul>
+	</li>
+	<li>If you love textbooks, can use 
+	<a href="http://www.amazon.co.uk/Software-Engineering-International-Computer-Science/dp/0321313798/">
+	Sommerville</a>; I have a copy, so does the library.
+	<ul>
+	<li>Shouldn't ever need to use book, handouts cover most relevant stuff.</li>
+	</ul>
+	</li>
+	<li><a href="http://en.wikipedia.org/wiki/Strategic_Defense_Initiative">Star Wars</a> - AKA SDI
+	<ul>
+	<li>1980s US military project</li>
+	<li>Fae Raegan's idea</li>
+	<li> It was never any good :( </li>
+	</ul> 	
+	</ul>	
+	
+
+	<h2>Lecture 2 - The Game</h2>
+	<p><em>Lecture: Fri 1st February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>	
+	<ul>
+	<li>You are a software project management team &ndash; Make decisions!</li>
+	<li>Need to consider trade-offs: <br /><img src="images/tradeoffs.png" /> <br /><ul><li>These are "mutually contradictory".</li></ul></li>
+	</ul>
+		
+
+	<h2>Lecture 3 - Project Management</h2>
+	<p><em>Lecture: Tue 5th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>	
+
+	<p>Not really this black and white: Theres a scale of heavyweightedness. (Don't believe these is any formal measure though).
+
+	<h4>Heavy Weight Methodologies:</h4>
+	<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Total_quality_management">Total Quality Management</a> (TQM) <br /> 
+	A management philosophy with the aim of making effective use of human and material resources to achieve the goals of an organisation.
+	</li>
+	<li><a href="http://en.wikipedia.org/wiki/V-Model_(software_development)">V-Shaped Model</a> <br />
+	Like the <a href="http://en.wikipedia.org/wiki/Waterfall_model">waterfall model</a>, but shaped like a V (Can jump back across the V).</li>
+	<li>Detailed Plan</li>
+	<li><a href="http://en.wikipedia.org/wiki/Functional_specification">Functional Specifications</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Formal_Methods">Formal Methods</a> <br />
+	Mathematically modeled, and shown to be correct.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Capability_Maturity_Model">Capability Maturity Model</a> (CMM) <br />
+	A method for determining if a contractor is capable of fulfilling an order; Are their processes rigorous enough?</li>
+	<li><a href="http://en.wikipedia.org/wiki/PRINCE2">PRINCE/PRINCE2</a>  <br />
+	<strong>PR</strong>ojects <strong>IN</strong> a <strong>C</strong>ontrolled <strong>E</strong>nvironment. A methodology developed by the 
+	<a href="http://en.wikipedia.org/wiki/Office_of_Government_Commerce">Office of Government Commerce</a> (OGC), 
+	and used extensively across the government for its public projects.</li>
+	<li><a href="https://en.wikipedia.org/wiki/ISO9000">ISO 9000</a> <br />
+	A set of ISO standards that relate to software development.</li>
+	<li><a href="https://en.wikipedia.org/wiki/Software_Process_Improvement_and_Capability_Determination">SPICE</a> <br />
+	A set of standards developed by the ISO.</li>
+	<li><a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=465261&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D465261">BOOTSTRAP</a> <br />
+	An IEEE process that conforms with SPICE.</li>
+	
+	</ul>
+	
+	<h4>Light Weight Models:</h4>
+	<ul> 
+	<li><a href="http://en.wikipedia.org/wiki/Agile_methods">Agile Methods</a> <br /> 
+	A family of iterative software engineering methodologies pioneered by (among others) <a href="http://en.wikipedia.org/wiki/Martin_Fowler">Martin Fowler</a>. 
+	Some Examples include:</li>
+	<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Agile_Unified_Process">Agile Unified Process</a> (AUP) <br />
+	A more agile version of IBM's <a href="http://en.wikipedia.org/wiki/IBM_Rational_Unified_Process">Rational Unified Process</a> (RUP)</li>
+	<li><a href="http://en.wikipedia.org/wiki/Scrum_(development)">Scrum</a> <br />
+	Daily scrum meetings, scrum boards, scrum master, product backlog, user stories, EPICs and sprints. Very process oriented, very popular in the industry.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Extreme_programming">Extreme Programming</a> (XP) <br /> 
+	Not what Pawel has made everyone think it is! A code oriented methodology that uses tight iteration. Makes use of Pair Programming, code review and unit testing. 
+	Encourages YAGNI, DRY (etc.)</li>
+	<li><a href="http://en.wikipedia.org/wiki/Feature-driven_development">Feature Driven Development</a> <br />
+	All work done should aim to implement or improve some client-focused functionality.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Lean_software_development">Lean</a> <br />
+	With roots in manufacture, it aims to cut waste, defer decisions, and deliver early.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Kanban_(development)">Kanban</a> <br />
+	Seems to be a more intense Scrum.</li>
+	</ul>
+	</ul>
+	
+	<h3>Standards Bodies</h3>
+	<p>There are many organisations that have produced standards for software project management:</p>
+	<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Software_Engineering_Institute">SEI</a> &ndash; (Carnegie Mellon) Software Engineering Institute <br />
+	+ CMM </li>
+	<li><a href="http://en.wikipedia.org/wiki/European_Software_Institute">ESI</a> &ndash; European Software Institute <br />
+	Looks pretty terrible</li>
+	<li><a href="http://en.wikipedia.org/wiki/Office_of_Government_Commerce">OGC</a> &ndash; Office for Government Commerce <br />
+	+ PRINCE2</li>
+	<li><a href="http://en.wikipedia.org/wiki/ESA">ESA</a> &ndash; European Space Agency</li>
+	<li><a href="http://en.wikipedia.org/wiki/Ministry_of_Defence_(United_Kingdom)">MoD</a> &ndash; Ministry of Defence</li>
+	<li><a href="http://en.wikipedia.org/wiki/ISO">ISO</a> &ndash; International Standards Organisation</li>
+	</ul>
+
+	<h3>Motives for Government Standardisation of Software Projects</h3>
+	<p>The Government, Military and Industry have all produced standards for software development. 
+	Paul did admit that these answers were actually just speculative:</p>
+	<ul>
+	<li>Software is pervasive. (Ubiquity)</li>
+	<li>Security</li>
+	<li>Software is a major export</li>
+	<li>Gov. is a large customer to Software companies</li>
+	<li>Wish to avoid embarrassment</li>
+	<li>Software is part of our national infrastructure &ndash; like roads!</li>
+	</ul>
+	
+	<h3>Defining Software Quality Assurance</h3>	
+	There are many definitions of Software QA, here are a few:
+	
+	<h4>IEEE Definitions:</h4>
+	<ol>
+	<li>A planned and systematic pattern of all actions necessary to provide <i>adequate confidence<sup>1</sup></i> 
+	that an <i>item or product<sup>2</sup></i> conforms to <i>established requirements<sup>3</sup></i>. <br />
+	<sup>1. Customer/other standards. 2. Not just software (e.g. docs). 3. From the customer.  Customer comes first!</sup>
+	
+	<li>A set of activities designed to evaluate the process by which the products are developed or maintained.</li>
+	</ol>
+	
+	<h4>TQM/CMM Definition:</h4>
+	<p>Look at the process: quality of machinery etc. A good quality process <strong> will </strong> produce good quality products. <br />
+	This is a heavy weight view of the world. Agile methods would probably disagree.</p>
+	
+	<p>These ideas come from the world of manufacture. Example that is thrown around is Ford Transit vans, differences between these two
+	universes might disprove the theory..</p>
+	
+	<h5>Differences Between Vans & Software</h5> 
+	<ul>
+	<li>Cheaper to fix software errors.</li>
+	<li>Once software is designed, it can be reproduced and distributed perfectly.</li>
+	<li>Software wears in, Vans wear out.</li>
+	<li>Factories and software houses have totally different functions (production vs design).</li>
+	<li>Software has more flexibility - exploit this.</li>
+	<li>Vans are tangible, software is not.</li>
+	</ul>
+	
+	<h3>Defining Process</h3>
+	<img src="images/process.png" />
+	<p>Means by which people, procedures, methods, equipment and tools are integrated to produce a desired end result.</p>
+	
+	<p>There exists: Component based software engineering</p>
+
+
+	<h2>Lecture 4 - Overheads</h2>
+	<p><em>Lecture: Fri 8th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	
+	<p>You <strong>will</strong> graduate and get a job. Reluctantly, your employer will pay you a salary 
+	&ndash; Turns out you cost the company a lot more than just your salary!<p>
+	
+	<ul>
+	<li>Equipment</li>
+	<li>Training</li>
+	<li>Recruitment</li>
+	<li>Services</li>
+	<li>Holidays</li>
+	<li>(wikid) Sick pay </li>
+	<li> Mat/Pat leave</li>
+	<li>Learning time</li>
+	<li>Redundancy pay</li>
+	<li>Insurance</li>
+	<li>Corporate perks</li>
+	<li>Professional Indemnity & Public Liability Insurance</li>
+	<li>Pensions</li>
+	</ul>
+
+	<p>Exact amount varies from company to company, typically overheads = salary. 
+	Thus total staff costs about are double the salary.</p>
+	
+	<p>Typically a contract will cost the customer 3-4x the amount that is paid in salary. 
+	It is often still worth it to the employee and the customer: </p>
+	<ul>
+	<li>Lower risk</li>
+	<li>Don't have to recruit a team</li>
+	<li>Can hire people who have worked together before</li>
+	<li>Don't need strong industry understanding &ndash; NHS...</li>
+	</ul>
+
+	<h3>Freelancing</h3>	
+
+	<p>It is also possible for workers to "go freelance". i.e. work as a contractor or IT specialist. This path can have positives and negatives:
+	<h5>Pro: </h5>
+	<ul>
+	<li>Earn more money.</li>
+	<li>Be your own boss.</li>
+	<li>Greater freedom; do what you want how you want.</li>	
+	<li><em>BEAT THE SYSTEM!</em></li>
+	</ul>
+	<h5>Con: </h5>
+	<ul>
+	<li>Higher risk</li>
+	<li>No corporate benefits.</li>
+	<li>Less job security. Freelancers are often first to go in times of trouble.</li>
+	<li>Need a good CV/Portfolio.</li>	
+	<li>Time wasted travelling</li>
+	</ul>
+
+	<p>Long & short term views...</p>
+
+
+	<h2>Lecture 5 - CMM</h2>
+	<p><em>Lecture: Tue 12th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	<h4>IEEE Definitions:</h4>
+	<ol start=3>
+	<li>Development process and maintenance conforms to requirements. Keeping to schedule and budget. <sup>(Plus happy staff)</sup> </li>
+	</ol>
+
+	<h3>Capability Maturity Model</h3>
+	
+	<p>All began in around 1986. First version released in 1992, then made public in 1993. CMM is based on these principles:</p>
+	<ul>
+	<li>By employing elaborate, quantitative approaches to management, the quality and productivity of the process can be increased.</li>
+	<li>By understanding what needs to be improved, we can improve the overall performance - and rise up through the levels</li>
+	<li>Process areas are generic. They specify "what" not "how"; this allows them to be used with different methodologies, and different stages of development</li>
+	</ul>	
+	
+	<p>There are many different flavours of CMM, including: Trusted CMM, System Security Engineering CMM and People CMM.</p>
+
+	<h4>Levels</h4>
+	<ol start="0">
+	<li>Incomplete</li>
+	<li>Performed - Unpredictable and poorly controlled. e.g. Hacker</li>
+	<li>Managed - Can repeat previously mastered tasks. e.g. Most European companies</li>
+	<li>Defined - Process characterized, fairly well understood</li>
+	<li>Quantitatively Managed - Process measured and controlled</li>
+	<li>Optimized - Focus on process improvement</li>
+	</ol>
+
+	<h4>Key Process Areas</h4>
+	<p>CMM defines whether the KPA is the projects responsibility, or that of the company.</p>
+	<table border = "1" cellpadding = "5" cellspacing="5">
+	<tr style bgcolor="lightgray"><td>Area</td><td>Project</td><td>Company</td></tr>
+	<tr><td>Requirements Management</td><td>X</td><td></td></tr>
+	<tr><td>Software Project Planning</td><td>X</td><td></td></tr>
+	<tr><td>Software Quality Assurance</td><td></td><td>X</td></tr>
+	<tr><td>Project Tracking</td><td>X</td><td></td></tr>
+	<tr><td>Process Definition</td><td></td><td>X</td></tr>
+	<tr><td>Subcontractor Management</td><td>X</td><td></td></tr>
+	<tr><td>Configuration Management</td><td>X</td><td></td></tr>
+	<tr><td>Training Programme</td><td></td><td>X</td></tr>
+	<tr><td>Integrated Software Management</td><td>X</td><td></td></tr>
+	<tr><td>Inter-group Coordination</td><td>X</td><td></td></tr>
+	<tr><td>Tech Change Mgmt</td><td></td><td>X</td></tr>
+	<tr><td>Peer Reviews</td><td>X</td><td></td></tr>
+	<tr><td>Quantitative Change Management</td><td>X</td><td></td></tr>
+	<tr><td>Software Quality Management</td><td>X</td><td></td></tr>
+	<tr><td>Process Change Management</td><td></td><td>X</td></tr>
+	<tr><td>Defect Prevention</td><td>X</td><td></td></tr>
+ 	</table>
+
+	<h3>Comparing CMM and ISO9001</h3>
+	<h4>Both Manage:</h4>
+	<ul>
+	<li>Development</li>
+	<li>Training</li>
+	<li>Testing</li>
+	<li>Reviewing</li>
+	<li>Change Control</li>
+	<li>Standards</li>
+	<li>Metrics</li>
+	</ul>
+
+	<h4>CMM Covers:</h4>
+	<ul>
+	<li>Whole process</li>
+	<li>Productivity, sizing, costing</li>
+	<li>Experience across projects</li>
+	<li>Re-use</li>
+	<li>Prototyping</li>
+	<li>Improving Process</li>
+	<li>Metrics database</li>
+	</ul>
+
+	<h4>ISO 9001 Covers:</h4>
+	<ul>
+	<li>Project control towards the end</li>
+	<li>Acceptance, delivery, replication, installation, maintenance</li>
+	<li>Document control</li>
+	<li>Managerial and technical interfaces</li>
+	</ul>
+
+	<p> I have a diagram that suggests TQM looks at the organisation, and CMM looks at the project?</p>	
+
+	<h2>Lecture 6 - Contracts</h2>
+	<p><em>Lecture: Fri 15th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	
+	<h4>Fixed Price</h4>
+	<p>A price is determined before the project starts. If you do it for less, great. But if you go over budget, tough!</p>
+	<ul>
+	<li>Stable price for customer</li>
+	<li>Might end up with cut corners &rArr; not good!</li>
+	<li>Can be bad for the software company, if they bid too low.</li>
+	</ul>
+
+	<h4>Time & Materials</h4>
+	<p>The client keeps forking out until the project is complete.</p>
+	<ul>
+	<li>Bad for client; hard to predict cost, might get taken for a ride.</li>
+	<li>Good for software company, they can just keep finding more work</li>
+	</ul>
+	
+	<br />
+
+	<p>Real contracts tend to be a combination of both. For example, the core functionality could be 
+	agreed to be done for a fixed price, then any extras could be billed by time and materials</p>
+
+	<h3>Estimating costs</h3>
+	<p>Software projects are notoriously difficult to estimate. The following are a few techniques:</p>
+	<ol>
+	<li><strong>Analogy</strong> (&plusmn;400%)
+		<ul>
+		<li>Look at similar projects, and base estimate on that.</li>
+		<li>Complexity may be underestimated.</li>
+		<li>Person estimating may be inexperienced (e.g. sales staff).</li>
+		</ul></li>
+	<li><strong>Parkinson's law</strong> (&plusmn;400%)
+		<ul>
+		<li>Work expands to fill time available.</li>
+		<li>Estimate made based on resources available.</li>
+		</ul></li>
+	<li><strong>Price to Win</strong> (&plusmn;400%)
+		<ul>
+		<li>Bid however low is required to win the contract.</li>
+		<li>A loss leader &ndash; hope to get further business.</li>
+		<li>Not a good estimate.</li>
+		</ul></li>
+	<li><strong>Top Down</strong> (&plusmn;200%)
+		<ul>
+		<li>Come up with an architectural design.</li>
+		<li>Estimate how much each component would cost to build.</li>
+		<li>Will cost money to do the estimate.</li>
+		</ul></li>
+	<li><strong>Bottom Up</strong> (&plusmn;10%)
+		<ul>
+		<li>Come up with a complete design</li>
+		<li>Work out who would do what, and how long it would take</li>
+		<li>Obtain a very good estimate of the cost - Shell out huge amounts of money doing so.</li>
+		</ul></li>
+	<li><strong>Parametric Models</strong> (&plusmn;20%)
+		<ul>
+		<li>e.g. <a href="http://en.wikipedia.org/wiki/COCOMO">COCOMO</a> (Bohem)</li>
+		<li>Feed in details about project, e.g. staff numbers, SLOC</li>
+		</ul></li>
+	</ol>
+
+	<strong>Add graph?</strong>
+
+	<h4>The game - Secretaries and Managers</h4>
+	<p>Need about 1:6 with productive staff (of each). Don't want your staff to get bogged down with answering phone calls and managing themselves. :)</p>
+
+	<h2>Lecture 7 - Quality Assurance</h2>
+	<p><em>Lecture: Tue 19th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+
+	<p>Take measurements whenever you can, use these to judge how the project is going</p>
+
+	<table border = "1" cellpadding = "5" cellspacing="5">
+	<tr style bgcolor="lightgray"><td>#</td><td>Software Quality Factor</td><td>Definition</td><td>Metric</td></tr>
+	<tr><td>1</td><td>Correctness</td><td>Program satisfies specification, and fulfils user's objectives.</td><td>1 - (faults/LoC</td></tr>
+	<tr><td>2</td><td>Efficiency</td><td>Amount of computing resources required to perform function.</td><td>1 - (actual utilisation/allocated utilisation)</td></tr>
+	<tr><td>3</td><td>Flexibility</td><td>Effort required to make change.</td><td>1 - 0.05 (avg. labour days to change) </td></tr>
+	<tr><td>4</td><td>Integrity</td><td>Can unauthorised access be controlled.</td><td>1 - (security faults/LoC)</td></tr>
+	<tr><td>5</td><td>Interoperability</td><td>Effort to couple with another system</td><td>1 - (effort to couple/effort to develop)</td></tr>
+	<tr><td>6</td><td>Maintainability</td><td>Effort to locate and fix defect.</td><td>1 - 0.1 (avg. labour days to fix)</td></tr>
+	<tr><td>7</td><td>Portability</td><td>Effort required to change hardware or software platform</td><td>1 - (effort to transport / effort to develop)</td></tr>
+	<tr><td>8</td><td>Reliability</td><td>Expectancy of correctness and precision.</td><td>1 - (faults / LoC)</td></tr>
+	<tr><td>9</td><td>Re-usability</td><td>Can be used in other applications.</td><td>1 - (effort to convert/effort to develop)</td></tr>
+	<tr><td>10</td><td>Verifiability</td><td>(Testability) Effort required to test.</td><td>1 - (effort to verify/effort to develop)</td></tr>
+	<tr><td>11</td><td>Usability</td><td>Effort required to learn to use.</td><td>1 - (labour days to use/labour days to develop)</td></tr>
+ 	</table>
+
+
+	<h2>Lecture 8 - How the Game Works</h2>
+	<p><em>Lecture: Fri 22nd February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	<p>It is a discrete event simulation. Essentially: food goes in; poop comes out. <em>You</em> can't explain that.</p>
+	<p>The system is deterministic. We injected a random element using darts.</p>
+	
+
+	<h2>Lecture 9 - Metrics for an Installed System</h2>
+	<p><em>Lecture: Tue 26th February 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+
+	<h4>Process metrics</h4>
+	<ul>
+	<li>Man hours</li>
+	<li>Lines of Code, Commits, etc. (Output)</li>
+	<li>Team size</li>
+	<li>Number of Holiday and Sick days</li>
+	<li>Time on work phases</li>
+	</ul>
+
+	<h3>Definitions</h3>
+	<ul>
+	<li><strong>Reliability:</strong> Probability that the software will not fail within a given time 
+	<strong><u>or</u></strong> Probability that it will perform on demand.</li>
+	<li><strong>RoCoF:</strong> Rate of Continuous Failure, the rate at which failures occur. (1/reliability)</li>
+	<br />
+	<li><strong>MTTF:</strong> Mean time to failure &rarr; Current?</li>
+	<li><strong>MTBF:</strong> Mean time between failures  &rarr; Past?</li>
+	<li><strong>MTTR:</strong> Mean time to repair</li>
+	<br />
+	<li><strong>Availability:</strong> Probability that system will be functioning at a given time. <br />
+	MTBF / (MTBF + MTTR)</li>
+	</ul>
+	<h3>Bugs</h3>	
+	<p><strong>Note: Number of bugs fixed, doesn't really let us know how many bugs are in the software.</strong></p> 
+	
+	<h5>Estimates</h5>
+	<ul>
+	<li>Compare previous project</li>
+	<li>Test coverage</li>
+	</ul>
+	
+	<img src="images/bugs.png" />
+	<p>When code is released, number of known bugs jumps! Why:</p>
+	<ul>
+	<li>New ways of using it</li>
+	<li>Weird combos</li>
+	<li>New platform (SW or HW)</li>
+	<li>Number of user goes up</li>
+	<li>No longer tested to the spec</li>
+	<li>Volume of data</li>
+	<li>Date and Seasonal effects</li>
+	<li>Geographic</li>
+	</ul>
+
+	<p>There was a good example about some F17s that didn't take into consideration the international date line, and got lost...</p>
+
+
+	<h2>Lecture 10 - Critical Path Analysis (CPA)</h2>
+	<p><em>Lecture: Friday 1st March 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	
+	<p>Apparently I though it was the 29th February :/</p>
+	
+	<p><a href="http://en.wikipedia.org/wiki/Critical_path_method">Critical Path Analysis</a> is all about drawing 
+	<a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed Acyclic Graphs</a> (DAGs). </p>
+	
+	<img src="images/CPA.png" width ="60%"/>
+	
+	<p>In the lecture we did an example for making a cup of tea &ndash; I don't have this example written down. 
+	IIRC one simply builds up the graph with all the weights, and then works backwards across it to work out which path is the longest. 
+	It's a good idea to have good estimates, even for tasks not on the Critical Path. One should probably prioritise the tasks on the critical path.</p>
+
+	<p><strong>PERT:</strong> Program Evaluation & Review Technique</p>
+	
+	<p><strong>Float/Slack:</strong> When an activity can be delayed without affecting the critical path it is said to have slack. (Time difference - 1)</p>
+
+	<h2>Lecture 11 - CPA & SW Projects</h2>
+	<p><em>Lecture: Tue 5th March 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	
+	<p>CPA isn't prefect for software projects:</p>
+	<ul>
+	<li>Software is difficult to estimate</li>
+	<li>Changing requirements &ndash; Surprise!</li>
+	<li>Doesn't allow iterative development; No good for Agile.</li>
+	<li>Development doesn't tend to be strictly sequential. Tasks overlap.</li>
+	</ul>
+	
+	<p><em>There are modifications to CPA that allow parallel tasks (Overlap).</em></p>
+	
+	<p>We can also use three different values:
+	<ul>
+	<li>Optimistic (a)</li>
+	<li>Reasonable (b)</li>
+	<li>Pessimistic (c)</li>
+	</ul>
+
+	<p>We can use a weighted average of these estimates:</p>
+	<blockquote>(a + 4b + c) / 6 </blockquote>
+	
+	<h4>From the Handout</h4>
+	<p>Some rules:
+	<ul>
+	<li>Network should only have one start</li>
+	<li>Network should only have one end</li>
+	<li>Nodes have duration</li>
+	<li>Links don't have duration</li>
+	<li>Precedents are the immediately preceding activities</li>
+	<li>Time moves from left to right (+ Add arrows)</li>
+	<li>No loops! If required, use loop unrolling</li>
+	<li>No dangles</li>
+	</ul>
+	</p>
+
+	<p><strong>Lagged Activities:</strong> By adding a weight to an arrow we can show that an activity can 
+	occur in parallel with another, starting the set time after the first</p>
+	
+	<p><strong>Labeling:</strong> There are standards, Paul says to use what your organisation uses &ndash; stay consistent. Some things to include:
+	<ul>
+	<li>Activity Label</li>
+	<li>Duration</li>
+	<li>Earliest/Latest start</li>
+	<li>Earliest/Latest finish</li>
+	<li>Activity span</li>
+	<li>Float/slack</li>
+	<li>Description</li>
+	</ul>
+	</p>
+	
+	<p>When making estimates for times, check what the client wants. And ask the developers for estimates &ndash; they are the experts, take their advice.</p>
+	
+	<p><ul>	
+	<li><strong>Forward Pass:</strong> Work out the earliest things can be done. Based on all precedents finishing.</li>
+	<li><strong>Backward Pass:</strong> calculate the critical path.</li>
+	<li><strong>Critical Path:</strong> the path(s) that defines the duration of the project.</li>
+	<li><strong>Slack:</strong> The difference between the earliest start and the latest start. May not want to advertise this value ;)</li></p>
+	</ul></p>
+
+	<p><strong>Note: </strong> Activities not on the critical path, may end up on the critical path if something changes! 
+	Can mitigate against this by observing the tasks that have low slack.</p>
+
+	<h2>Lecture 12 - Components of the Game</h2>
+	<p><em>Lecture: Fri 9th March 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	
+	<p>This lecture didn't really contain any valuable content. It was just a discussion of how the different components of the game fit together.</p>
+	<p>Little bit about how you will always find more bugs :)</p>
+
+	<h2>Lecture 13 - Reuse</h2>
+	<p><em>Lecture: Tue 12th March 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em> <br />
+	<strong>I missed this lecture because I was eating Mexican food at Bloomberg :)</strong></p>
+
+	<p>You can reuse deliverable items (e.g. Project Plan). What effect does this have on bugs? (PS: Why are reuse and reuse the same word?)</p>
+
+	<h4>Reuse and Metrics</h4>
+	<p><ul>
+	<li>Reuse libraries</li>
+	<li>Component based software engineering</li>
+	<li>Object oriented programming promotes reuse</li>
+	<li>Comercially: 
+		<ul>
+		<li>APIs</li>
+		<li>STL</li>
+		<li>Java beans</li>
+		</ul>
+	</ul></p>
+
+	<h4>Pros & Cons</h4>
+	<p><ul>
+	<li>Hopefully less bugs</li>
+	<li>Need to find a solution that fits your use case</li>
+	<li>Need to adapt it to work well</li>
+	</ul></p>
+	
+	<h4>Goffney Model Basis</h4>
+	<p><ul>
+	<li>If a system consists in part of reused code; its quality will probably be higher</li>
+	<li>The reused components have passed through integration and system testing again</li>
+	<li>On each subsequent reuse this happens again!</li>
+	</ul></p>
+
+	<img src="images/reuse.png" />
+
+	<h5>Tiny Bit of Maths</h5>
+	<p>Some definitions:
+	<ul>
+	<li>Dvr: Residual bugs in reused code</li>
+	<li>Dvn: Residual bugs in new code</li>
+	<li>R: Proportion reused code</li>
+	<li><strong>Dri = Dvm * (1 - R) + Dvr * R</strong></li> 
+	</ul>	
+	</p>
+	
+	<h5>Example</h5>
+	<h6>Case A</h6>
+	<p> 50% new, 50% old; Dvn = 6 bugs/kLoC; Dvr = 2 bugs/kLoC; Avg = 4 bugs/kLoC </p>
+	
+	<h6>Case B</h6>
+	<p> 40% new, 60% old; Dvn = 4 bugs/kLoC; Dvr = 2 bugs/kLoC; Avg = 2.8 bugs/kLoC </p>	
+
+	<h2>Lecture 14 - WIN-WIN</h2>
+	<p><em>Lecture: Fri 15th March 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em> <br />
+
+	<img src="images/scale.png" />
+
+	<p>WIN-WIN is a methodology proposed by <a href="http://en.wikipedia.org/wiki/Barry_Boehm">Barry Boehm</a>. 
+	It is a spiral based model that places a heavy focus on the stakeholders. Unlike V-Shape which only has two meetings with clients, 
+	Win-Win has three meetings will all stakeholders. Stakeholders include:
+	<ul>	
+	<li>Software Engineer</li>
+	<li>Users</li>
+	<li>Finance</li>
+	<li>User's clients</li>
+	<li>Maintainer</li>
+	</ul>
+	</p>
+
+	<img src="images/WinWin.png" />
+	
+	<h4>During Meetings</h4>
+	<p><ul>
+	<li>Identify each stakeholders win conditions</li>
+	<li>Negotiate and agree on what the software will do</li>
+	<li>Trade offs</li>
+	<li>Mutually beneficial transaction</li>
+	</ul></p>
+	
+	<h4>Win-Win Anchor Points</h4>
+	<p><ul>
+	<li><strong>LCO:</strong> Life Cycle Objectives (Functional Spec)</li>
+	<li><strong>LCA:</strong> Life Cycle Architecture (Part way)</li>
+	<li><strong>IOC:</strong> Initial Operational Capability (First prototype)</li>
+	</ul>
+	Stakeholders commit at these points. This drives the spiral model.</p>
+
+
+
+	<h2 style= "color:green"> = Easter Vacation! = </h2>	
+
+
+
+	<h2>Lecture 15 - Risk Management</h2>
+	<p><em>Lecture: Tue 16th April 2013 &nbsp;-&nbsp; Today: Sun 26th May 2013</em></p>
+
+	<p><strong>Note:</strong> Risk management can be a full time job!</p>
+	
+	<p>What risks might cause a software project to go wrong?
+	<ul>
+	<li>We can't eliminate risk; 'Minimising' risk is a limited strategy.</li>
+	<li>Need to accept that risks exist &ndash; take the 'right' risk.</li>
+	</ul></p>
+
+	<p>Don't react to risk, be proactive:
+	<ul>
+	<li>Identify</li>
+	<li>Assess</li>
+	<li>Plan</li>
+	</ul></p>
+
+	<h4>Development Environment Risks</h4>
+	<p>
+	The following risks may need to be taken into consideration on a software project:
+	<ul>
+	<li>Tool support</li>
+	<li>Tool quality & documentation</li>
+	<li>Tool familiarity</li>	
+	<br />
+	<li>Best people</li>
+	<li>Staff turnover</li>
+	<li>Training</li>
+	<li>Sufficient staffing levels</li>
+	<br />
+	<li>Estimates</li>
+	<li>Lots of users</li>
+	<li>Lots of reuse</li>
+	<li>Delivery sooner</li>
+	<li>Requirements change</li>
+	</ul>
+	</p>
+	
+	<p>Ask people on the project what they think the risks are.</p>
+	
+	<p>It is not unreasonable for a large project to have 40-60 live risks. These can be saved in a risk database.</p>
+	
+	<p>We are worried about probability (how likely) and impact (what effect): there are many factors that can be impacted:
+	<ul>
+	<li>Cost</li>
+	<li>Schedule</li>
+	<li>Quality</li>
+	<li>Reputation</li>
+	<li>Morale</li>
+	</ul>
+	Since it is easiest to measure cost and schedule - these are typically the ones that we measure.</p>
+
+	<p><strong>Prioritise:</strong> Probability * Impact = Importance
+	<br /> Use this formula wisely, other factors could override it. Do we do easiest task first. Do we do something because the boss tells us to?</p>
+
+
+	<h2>Lecture 16 - SAIV</h2>
+	<p><em>Lecture: Fri 19th April 2013 &nbsp;-&nbsp; Today: Sun 26th May 2013</em></p>
+	<p><strong> I missed this lecture.. London me thinks. </strong></p>
+
+	<blockquote>
+	<strong>SAIV - Schedule as Independent Variable</strong><br />
+	A development paradigm where software development is downsized and minor features are dropped in order to meet a schedule.<br />
+	<br />
+	<em>This software engineering-related article is a stub. <strong>You</strong> can help Wikipedia by expanding it.</em>
+	</blockquote>
+
+	<p>In SAIV, the schedule dominates over Quality/Price. e.g. Olympics Software || Asteroid mining.</p>
+
+	<h4>Trends</h4>
+	<ul>
+	<li>Change is faster</li>
+	<li>Schedules are so tight that you are forced to release bug ridden software!</li>
+	<li>Managing change is most important</li>
+	<li>Suborn user requirements to cost and schedule</li>
+	</ul>
+
+	<h4>SAIV Approaches</h4>
+	<ul>
+	<li>Build the core capability first</li>
+	<li>Prioritise features</li>
+	<li>Drop features to meet schedule</li>
+	</ul>
+	
+	<p><img src="images/SAIV.png" /><br />
+	<span style="color: red">This graphs sucks :)</span></p>
+	
+	<p> 80% of the time covers 20% of the features &ndash; try to eliminate these time consuming features. Identify the areas that are slowing you down!</p>
+
+	<h4>SAIV & PERT</h4>
+	<p><strong>PERT:</strong> <a href="http://en.wikipedia.org/wiki/Program_Evaluation_and_Review_Technique">Project Evaluation and Review Technique</a>; 
+	a statistical tool used in conjunction with CPA.</p>
+	
+	<p>
+	When you save time on an activity, you will only save time on the overall schedule if that task was on the critical path. Unfortunately the CP is difficult to 
+	define since  software development is complex. 
+	</p>
+
+	<p>
+	A 'RAD Opportunity Tree' can be used to help identify the CP. <br />
+	e.g. Motorola round-the-world testing - Test software 24 hours a day by doing it in different places.
+	</p>
+
+	<h3>Safety Life-Cycle Model for Software Development</h3>
+
+	<p><em>IRCC, Paul said in the revision lecture that this is just any traditional method with a hazard audit tacked onto the front?</em></p>
+
+	<p>Used when Quality &gt; Time / Schedule.</p>
+	<p>Like the traditional phase oriented model <b>but</b>:
+	<ul>
+	<li>Identify Hazards</li>
+	<li>Asses the risks:<ul>
+		<li>Legislation</li>
+		<li>Standards</li>
+		<li>Regulation by the safety and regulatory authorities</li>
+		</ul>
+	</li></ul>
+
+	<p>Aims to give a 1 in 10<sup>9</sup> probability of failure. (Typical project is about 1 in 10<sup>3</sup>/10<sup>4</sup>)</p>
+
+	<p>The safety integrity level of the software system: More safety critical &rarr; more rigour (Formal methods, extra testing, etc.). <br />
+	Rank between 1 (Very High) and 5 (<a href="http://garfield.wikia.com/wiki/Nermal">Nermal</a>).</p>
+
+	<h2>Lecture 17 - Monte Carlo Simulation</h2>
+	<p><em>Lecture: Tue 23rd April 2013 &nbsp;-&nbsp; Today: Sun 26th May 2013</em></p>
+	
+	<h4>Risk MGMT</h4>
+	<p>Importance = Probability * Impact</p>
+	<p>Can work out the combined effect of risk using probability arithmetic...</p>
+	<p>This looks to me like really simple, year four/five maths... But let's do an example anyway!</p>
+	
+	<table border = "1" cellpadding = "5" cellspacing="5">
+	<tr style bgcolor="lightgray"><td>Risk</td><td>Probability</td><td>Delay</td></tr>
+	<tr><td>A</td><td>0.6</td><td>4 Months</td></tr>
+	<tr><td>B</td><td>0.4</td><td>2 Months</td></tr>
+	<tr><td>C</td><td>0.4</td><td>2 Months</td></tr>
+	</table>
+	
+	<h5>Calculations</h5>
+	<ul>
+	<li>0 Months delay: 0.4 * 0.6 * 0.6 = 0.144 </li>
+	<li>2 Months delay: 0.4 * 0.4 * 0.6 + 0.4 * 0.6 * 0.4 = 0.192 </li>
+	<li>4 Months delay: 0.6 * 0.6 * 0.6 + 0.4 * 0.4 * 0.4 = 0.28 </li>
+	<li>6 Months delay: 0.6 * 0.4 * 0.6 + 0.6 * 0.6 * 0.4 = 0.288 </li>
+	<li>8 Months delay: 0.6 * 0.4 * 0.4  = 0.096 </li>
+	<br />
+	<li>Sum as sanity check = 1.0!</li>
+	</ul>
+	
+	<p>Mitigate by creating a new graph and doing some cost-benefit trade-off.</p>
+
+	<h5>Monte Carlo Simulations</h5>
+	<p><em>Remember that crazy lecture where we passed a D10 around the room.</em></p>
+	<p>Just roll a lot of dice and see where they fall. Roll 3 times:
+	<ul>
+	<li>Roll one, 6/10 digits for A</li>
+	<li>Roll two, 4/10 digits for B</li>
+	<li>Roll three, 4/10 digits for C</li>
+	</ul>
+	</p>
+	<p>Not quite sure how one would do that in an exam, I guess just use "random" numbers.</p>
+	
+	<p>Have a Risk Table; Do a Risk Management plan - An RMMM plan:
+	<ul>
+	<li>Mitigate</li>
+	<li>Monitor</li>
+	<li>Manage</li>
+	</ul>
+	This can incur and extra cost (Do a cost/benefit trade-off), and the risk table will need to be revised regularly if it is to be of use. 
+	</p>
+
+	<h5>Go/No Go?</h5>
+	<img src="images/GoNoGo.png" />
+	<p>If we can keep at least on of the axes low, then it's a go...</p>
+
+	<h2>Lecture 18</h2>
+	<p><em>Lecture: Fri 26th April 2013 &nbsp;-&nbsp; Today: Sun 26th May 2013</em></p>
+	<strong style="color: red"> Missing: I think this lecture may have been cancelled? </strong>
+
+	<h2>Lecture 19 - Agile Methods</h2>
+	<p><em>Lecture: Tue 30th April 2013 &nbsp;-&nbsp; Today: Sun 26th May 2013</em></p>
+	
+	<h3>Democratic Process Model</h3>	
+	<p>Old projects = Meet with customer once &rarr; Hand over finished product give years later!</p>
+	
+	<h4>The Agile Manifesto</h4>
+	(<a target="_blank" href="http://agilemanifesto.org/">A pretty good page</a>)
+	<ul>
+	<li>Individuals & interactions are more important than the method.</li>
+	<li>Working software is better than documentation</li>
+	<li>Customer interaction is better than contract negotiation</li>
+	</ul>
+	
+	<h5>Examples</h5>
+	<ul>
+	<li><a href="http://en.wikipedia.org/wiki/Scrum_(development)">Scrum</a> <br />
+	Daily scrum meetings, scrum boards, scrum master, product backlog, user stories, EPICs and sprints. Very process oriented, very popular in the industry.</li>
+	
+	<li><a href="http://en.wikipedia.org/wiki/Extreme_programming">eXtreme Programming</a> (XP) <br /> 
+	Not what Pawel has made everyone think it is! A code oriented methodology that uses tight iteration. Makes use of Pair Programming, code review and unit testing. 
+	Encourages YAGNI, DRY (etc.)</li>
+	
+	<li><a href="http://en.wikipedia.org/wiki/Adaptive_Software_Development">Adaptive Software Development</a> (ASD) <br />
+	Makes use of speculate, collaborate and learn cycles.</li>
+	
+	<li><a href="http://en.wikipedia.org/wiki/Rapid_application_development"> Rapid Application Development</a> (RAD) <br />
+	Makes use of prototyping.</li>
+	</ul>
+	
+	<h5>Some Key Traits</h5>
+	<p>The following is a list of key features of agile methods:
+	<ul>
+	<li>Face to face communication is the best way to relay information</li>
+	<li>Working software is best measure of progress</li>
+	<li>Sustainable development is preferred. Avoid burnout!</li>
+	<li>Aim for technical excellence</li>
+	<li>Simplify &rarr; YAGNI (You Ain't Gonna Need It)</li>
+	<li>Team reflects on how to get better on a regular basis</li>
+	<li>Aim to satisfy customer by delivering early software</li>
+	<li>Welcome changing requirements</li>
+	<li>Deliver new work frequently (every 2 weeks?)</li>
+	<li>Business people and developers must work together closely</li>
+	<li>Best teams are self organising</li>
+	</ul>
+	Note that Paul said he doesn't agree with all of these statements</p>
+
+	<h5>When can you use it?</h5>
+	<ul>
+	<li>Safety critical &rarr; No </li>
+	<li>Early delivery &rarr; Yes </li>
+	<li>High uncertainty &rarr; Yes </li>
+	<li>Really big teams &rarr; No </li>
+	<li>Does the company culture permit this? <em>You can't do agile in a suit!</em></li> 
+	</ul>
+	</p>
+
+	<p>
+	It also depends on the client, and the team:
+	<h5>Client</h5>
+	<ul>
+	<li>Unavailable &rarr; No</li>
+	<li>Not Motivated &rarr;  No</li>
+	<li>Not expert &rarr; No</li>
+	<li>Client demands a process!</li>
+	<li>Level of maintainability post-handover</li>
+	</ul>
+	
+	<h5>Team</h5>
+	<ul>
+	<li>Flexible &rarr; Yes </li>
+	<li>Motivated &rarr; Yes </li>
+	<li>Dispersed (Geographically) &rarr; No </li>
+	<li>Experiences &rarr; yes </li>
+	<li>Volatile &rarr; No </li>
+	</ul>
+	
+
+	<h2>Lecture 20 - More Risk Management</h2>
+	<p><em>Lecture: Fri 3rd May 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+
+	<p>You are offered &pound;500,000 &ndash; do you take it, or do you gamble it?</p>
+
+	<h3>Our class</h3>	
+	<ul>
+	<li>99:1 &rarr; 2 non-gamblers</li>
+	<li>98:2 &rarr; 2 non-gamblers</li>
+	<li>90:10 &rarr; 10 non-gamblers</li>
+	<li>60:40 &rarr;  1 gambler</li>
+	</ul>
+
+	<p>Individuals tend to prefer 100% &pound;500,000 to 60% &pound;1,000,000. Mathematically, this is a little bit weird:</p>
+	<blockquote>0.6 * &pound;1,000,000 = &pound;600,000</blockquote>
+	<p>Minimum risk exposure. People are risk averse. Big impact makes the choice of risking less appealing.</p>
+	<p>Businesses however, with their large assets, can take bigger risks, and on average they will come out on top :)</p>
+
+	<h2>Lecture 21 - Game only?</h2>
+	<p><em>Lecture: Tue 7th May 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+	<strong style="color: red"> Missing (Cancelled?) </strong>
+
+
+	<h2>Lecture 22 - Revision</h2>
+	<p><em>Lecture: Fri 10th May 2013 &nbsp;-&nbsp; Today: Thu 23rd May 2013</em></p>
+
+	<p>In this lecture slot Paul ran through some questions that Marinos had asked him by email.</p>
+	
+	<p>Explain how we used formal/semi-formal methods for calculating stuff in the project: Say which tools and techniques you used; 
+	if you didn't use a methodology, avoid this question - there are no marks for randomness!</p>
+
+	<p><strong>Freelancing Positives:</strong>
+	<ul>
+	<li>More money</li>
+	<li>More freedom</li>
+	<li>Work how you want (Tools & techniques)</li>
+	<li>Work where you want</li>
+	<li>Work with who you want</li>
+	<li>Manage your own overheads</li>
+	</ul>
+	</p>
+
+	<p><strong>Safety critical life-cycle:</strong><br />
+	Preliminary phase:  Hazard analysis. <br />
+	Can use any life-cycle really! (Although preferably a more formal one...)<br />
+	There are 5 grades of hazardousness. Lower number = More hazard &rarr; More rigour.</p>
+	
+	<p><strong>Government subsidises software projects</strong>
+	<br />Here is some speculation:
+	<ol><li>Government is a big software user, so it has a vested interest. (Payroll, Healthcare, Tax etc.)</li>
+	<li>Software is part of out national infrastructure. Governments build roads after all!</li>
+	<li>Failure is embarrassing, and it is very easy to blame the government</li>
+	</ol>
+
+	<h3>Stuff that is gone</h3>
+	<p>The following topics are no longer on the module:
+	<ul>
+	<li>Artificial Insemination</li>
+	<li>Rule of three</li>
+	</ul>
+	
+	<h3>Pro Tips</h3>
+	<ul>
+	<li>Regurgitating info from the lectures will get you good marks.</li>
+	<li>Can do better if you do a little bit of reading around (Not much time for that now!)</li>
+	<li>If you answer 4 questions, then he will use the best 3 marks!</li>
+	</ul>
+
+	<br />
+
+	<h1>Handouts</h1>
+	<p>We were given these handouts</p>
+	<ul>
+		<li><a href="docs/Handouts/CMM.pdf">CMM</a>
+		<br />Capability Maturity Model</li>
+
+		<li><a href="docs/Handouts/CMM_Levels.pdf">CMM Levels</a>
+		<br />The many levels of maturity in organisations</li>
+
+		<li><a href="docs/Handouts/CMM_vs_ISO9001.pdf">CMM vs ISO9001</a>
+		<br />A comparison on CMM and ISO9001</li>
+
+		<li><a href="docs/Handouts/CPA.pdf">CPA</a>
+		<br />A chapter about Critical Path Analysis</li>
+
+		<li><a href="docs/Handouts/QualityFactors.pdf">Quality Factors</a>
+		<br />Some of the constituents of software quality</li>
+
+		<li><a href="docs/Handouts/Reuse.pdf">Reuse</a>
+		<br />A couple of pages that explain why reuse increases software quality</li>
+
+		<li><a href="docs/Handouts/RiskMGMT.pdf">Risk Management</a>
+		<br />The user interface for a typical risk management package</li>
+
+	</ul>
+
+	<h1>Notes Page</h1>
+	<p>These files are from the notes page:</p>
+	<ul>
+		<li><a href="docs/Online/AgileMethods.pdf">Agile Methods</a> 
+		<br />A document that talks about agile: Agile manifesto etc.</li>
+
+		<li><a href="docs/Online/ArtificialBugInsemination.pdf">Artificial Bug Insemination</a> 
+		<br />Insert bug sperm into a bug?</li>
+
+		<li><a href="docs/Online/CMM.pdf">Capability Maturity Model</a> 
+		<br />Talks about CMM</li>
+
+		<li><a href="docs/Online/CMM_vs_ISO9001.pdf">Comparison of CMM and ISO 9001</a> 
+		<br />Gives an overview of the differences between CMM and ISO9001</li>
+
+		<li><a href="docs/Online/ExaminableTopics.pdf">Examinable Topics</a> 
+		<br />Tells you all the things you need to know!</li>
+		
+		<li><a href="docs/Online/Futures.pdf">Futures</a> 
+		<br />An aggregation of some odd documents on the future of software</li>
+
+		<li><a href="docs/Online/IEEEDefinitions.pdf">IEEE Definitions</a> 
+		<br />The IEEE definitions of Quality Assurance from above</li>
+
+		<li><a href="docs/Online/InternationalResponseToTheNeedForQuality.pdf">International Response to the Need for Quality</a> 
+		<br />Chats about some standards bodies and the likes</li>
+
+		<li><a href="docs/Online/ProcessModelDTable.pdf">Process Model Decision Table
+		</a> 
+		<br />A table to help you make decisions</li>
+
+		<li><a href="docs/Online/Reading.pdf">Reading</a> 
+		<br />A list of things you aren't going to read</li>
+
+		<li><a href="docs/Online/Reliability.pdf">Reliability</a> 
+		<br />Some definitions of reliability (MTBF etc)</li>
+
+		<li><a href="docs/Online/ReuseAndMetrics.pdf">Reuse and Metrics</a> 
+		<br />Talks about the benefits of reuse and a few nice libraries</li>
+
+		<li><a href="docs/Online/SwTrends.pdf">Software Trends</a> 
+		<br />An aggregation of some documents about software trends</li>
+
+		<li><a href="docs/Online/TestednessMetric.pdf">Testedness Metrics</a> 
+		<br />Talks about some ways of seeing how well tested something is</li>
+
+		<li><a href="docs/Online/TQM.pdf">Total Quality Management</a> 
+		<br />Fairly long set of slides about what TQM is</li>
+	</ul>
+
+
+	<h1>Student Notes</h1>
+	<p><a href="docs/Toms_Notes.pdf">Tom's notes</a> are fairly comprehensive</a></p>
+	<p>Ashley Browning also made some <a href="docs/Volcanic.pdf">notes</a> many moons ago.</p>
+
+	<h1>Links</h1>
+	<p>Have some free links:</p>
+	<ul>
+		<li><a href="http://www.comp.lancs.ac.uk/computing/resources/scs/index.html"> 
+			Advances in Safety Critical Systems</a></li>
+		<li><a href="http://www.esi.es/">European Software Institute</a></li>
+		<li><a href="http://www.sei.cmu.edu/">Software Engineering Institute</a></li>
+		<li><a href="http://www.tickit.org/">TickIT</a></li>
+	</ul>
+
+
+	<hr>
+	<p>This page was aggregated by Edward Seabrook - 2013</p>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
